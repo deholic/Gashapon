@@ -1,6 +1,6 @@
 //
-//  Model.swift
-//  Gashapon (iOS)
+//  GashaponModel.swift
+//  Gashapon
 //
 //  Created by Euigyom Kim on 2022/08/18.
 //

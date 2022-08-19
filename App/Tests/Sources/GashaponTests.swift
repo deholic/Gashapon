@@ -1,6 +1,6 @@
 //
-//  Tests_iOS.swift
-//  Tests iOS
+//  GashaponTests.swift
+//  GashaponTests
 //
 //  Created by Euigyom Kim on 2022/08/18.
 //

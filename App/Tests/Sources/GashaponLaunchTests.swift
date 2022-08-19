@@ -1,13 +1,13 @@
 //
-//  Tests_macOSLaunchTests.swift
-//  Tests macOS
+//  GashaponLaunchTests.swift
+//  GashaponTests
 //
 //  Created by Euigyom Kim on 2022/08/18.
 //
 
 import XCTest
 
-class Tests_macOSLaunchTests: XCTestCase {
+class Tests_iOSLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

@@ -1,6 +1,6 @@
 //
 //  AddItemView.swift
-//  Gashapon (iOS)
+//  Gashapon
 //
 //  Created by Euigyom Kim on 2022/08/18.
 //
