@@ -8,4 +8,12 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
-let project = Project.app(name: "App")
+let project = Project.app(
+	name: "App",
+	packages: [
+		.remote(
+			url: "https://github.com/pointfreeco/swift-composable-architecture",
+			requirement: .upToNextMajor(from: "0.39.0")
+		)
+	]
+)

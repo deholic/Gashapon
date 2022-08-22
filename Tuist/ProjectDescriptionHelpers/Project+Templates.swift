@@ -8,9 +8,10 @@
 import ProjectDescription
 
 extension Project {
-    public static func app(name: String, dependencies: [TargetDependency] = []) -> Project {
+    public static func app(name: String, packages: [Package] = [], dependencies: [TargetDependency] = []) -> Project {
         .init(
             name: name,
+            packages: packages,
             targets: [
                 Target(
                     name: name,
