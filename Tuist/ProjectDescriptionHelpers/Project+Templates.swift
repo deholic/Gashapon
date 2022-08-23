@@ -9,7 +9,15 @@ import ProjectDescription
 
 extension Project {
     public static func app(name: String, packages: [Package] = [], dependencies: [TargetDependency] = []) -> Project {
-        .init(
+        let infoPlist: [String: InfoPlist.Value] = [
+            "CFBundleShortVersionString": "1.0",
+            "CFBundleVersion": "1",
+            "CFBundleDisplayName": "\(name)",
+            "UIMainStoryboardFile": "",
+            "UILaunchStoryboardName": "LaunchScreen"
+        ]
+        
+        return .init(
             name: name,
             packages: packages,
             targets: [
@@ -17,8 +25,8 @@ extension Project {
                     name: name,
                     platform: .iOS,
                     product: .app,
-                    bundleId: "kr.destudio.fun.Gashapon\(name)",
-                    infoPlist: .default,
+                    bundleId: "kr.destudio.fun.\(name)",
+                    infoPlist: .extendingDefault(with: infoPlist),
                     sources: ["Sources/**"],
                     resources: ["Resources/**"],
                     dependencies: dependencies
@@ -27,10 +35,9 @@ extension Project {
                     name: "\(name)Tests",
                     platform: .iOS,
                     product: .unitTests,
-                    bundleId: "kr.destudio.fun.Gashapon\(name)Tests",
+                    bundleId: "kr.destudio.fun.\(name)Tests",
                     infoPlist: .default,
                     sources: ["Tests/Sources/**.swift"],
-                    resources: ["Tests/Resources/**"],
                     dependencies: [.target(name: name)]
                 )
             ]
