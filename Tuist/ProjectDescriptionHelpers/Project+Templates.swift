@@ -22,10 +22,10 @@ extension Project {
             packages: packages,
             targets: [
                 Target(
-                    name: "\(name)App",
+                    name: name,
                     platform: .iOS,
                     product: .app,
-                    bundleId: "kr.destudio.fun.\(name)App",
+                    bundleId: "kr.destudio.fun.\(name)",
                     infoPlist: .extendingDefault(with: infoPlist),
                     sources: ["Sources/**"],
                     resources: ["Resources/**"],
