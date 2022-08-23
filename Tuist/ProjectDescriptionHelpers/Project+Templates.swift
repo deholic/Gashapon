@@ -12,7 +12,7 @@ extension Project {
         let infoPlist: [String: InfoPlist.Value] = [
             "CFBundleShortVersionString": "1.0",
             "CFBundleVersion": "1",
-            "CFBundleDisplayName": "Gashapon",
+            "CFBundleDisplayName": "\(name)",
             "UIMainStoryboardFile": "",
             "UILaunchStoryboardName": "LaunchScreen"
         ]
@@ -22,10 +22,10 @@ extension Project {
             packages: packages,
             targets: [
                 Target(
-                    name: name,
+                    name: "\(name)App",
                     platform: .iOS,
                     product: .app,
-                    bundleId: "kr.destudio.fun.Gashapon\(name)",
+                    bundleId: "kr.destudio.fun.\(name)App",
                     infoPlist: .extendingDefault(with: infoPlist),
                     sources: ["Sources/**"],
                     resources: ["Resources/**"],
@@ -35,7 +35,7 @@ extension Project {
                     name: "\(name)Tests",
                     platform: .iOS,
                     product: .unitTests,
-                    bundleId: "kr.destudio.fun.Gashapon\(name)Tests",
+                    bundleId: "kr.destudio.fun.\(name)Tests",
                     infoPlist: .default,
                     sources: ["Tests/Sources/**.swift"],
                     dependencies: [.target(name: name)]

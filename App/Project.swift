@@ -9,7 +9,7 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project.app(
-	name: "App",
+	name: "Gashapon",
 	packages: [
 		.remote(
 			url: "https://github.com/pointfreeco/swift-composable-architecture",
