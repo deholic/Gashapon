@@ -4,7 +4,7 @@ Roll dice and pick winner!
 ## Features
 
 - [x] Add candidates and pick winner
-= [x] Set rolling count you want
+- [x] Set rolling count you want
 - [ ] Store candidates list for repeated events
 
 ## Requirements
